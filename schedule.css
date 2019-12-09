@@ -1,0 +1,17 @@
+header{
+    font-size: 80px;
+};
+.text-center{
+    font-size:1000px;
+}
+#button-addon2{
+    font-size: 100px;
+}
+.form-control{
+    height:50000px;
+    resize: none
+}
+#clear{
+    position: absolute;
+    right:50px;
+}
