@@ -120,127 +120,97 @@ $(document).ready(function(){
 var start_time=moment("9:00am","h:mma")
 var time_1 = moment("9:59am","h:mma");
 var end_1 = moment("10:00am","h:mma");
-var  current = moment().format("h:mm a")
+var current = moment().format("h:mm a")
 
-if(end_1.isAfter(current)){
+if(parseInt(current) < 9){
     hour_1A.attr("style","background-color: #e6e6e6");
-}else if( current.isBefore(time_1)){
-    hour_1A.attr("style","background-color:#ffffcc");
-}else if(start_time.isBetween(end_1)){
+}else if( parseInt(current) == 9){
+     hour_1A.attr("style","background-color:#ffffcc");
+ }else if(parseInt(current) > 9){
     hour_1A.attr("style","background-color: #ccffcc");
 }
 
 
-//Second Box schedule time set 
+// //Second Box schedule time set 
 
-var start_time_2=moment("10:00am","h:mma");
-var time_2= moment("10:59am","h:mma");
-var end_2= moment("11:00am","h:mma");
-
-if(end_2.isAfter(start_time_2)){
+if(parseInt(current) < 10){
     hour_2A.attr("style","background-color:#e6e6e6");
-}else if(start_time_2.isBetween(time_2)){
+}else if(parseInt(current) === 10){
     hour_2A.attr("style","background-color:#ffffcc");
-}else if (start_time_2.isBetween(end_2)){
+}else if (parseInt(current) > 10){
     hour_2A.attr("style","background-color:#ccffcc");
 };
 
-//Third Box Schedule box time set 
+// //Third Box Schedule box time set 
 
-var start_time_3=moment("11:00am","h:mma");
-var time_3= moment("11:59am","h:mma");
-var end_3= moment("12:00pm","h:mma");
-
-if(end_3.isAfter(start_time_3)){
+if(parseInt(current) < 11){
     hour_3A.attr("style","background-color:#e6e6e6");
-}else if(start_time_3.isBetween(time_3)){
+}else if(parseInt(current) === 11){
     hour_3A.attr("style","background-color:#ffffcc");   
-}else if(start_time_3.isBetween(end_3)) {
+}else if(parseInt(current) > 11) {
     hour_3A.attr("style","background-color:#ccffcc");
 };
 
-//Fourth BOx schedule Box time 
+// //Fourth BOx schedule Box time 
 
 
-var start_time_4=moment("12:00pm","h:mma");
-var time_4 = moment("12:59pm","h:mma");
-var end_4=moment("1:00pm","h:mma");
-
-
-if(end_4.isAfter(start_time_4)){
+if(parseInt(current) < 12){
     hour_4A.attr("style","background-color:#e6e6e6");
-}else if(start_time_4.isBetween(time_4)){
+}else if(parseInt(current) === 12){
     hour_4A.attr("style","background-color:#ffffcc"); 
-}else if (start_time_4.isBetween(end_4)){
+}else if (parseInt(current) > 12){
     hour_4A.attr("style","background-color:#ccffcc");
 }
 
-//Fifth Box schedule
+// //Fifth Box schedule
 
 
-var start_time_5 =moment("1:00pm","h:mma");
-var time_5 =moment("1:59pm","h:mma");
-var end_5 =moment("2:00pm","h:mma");
+if(parseInt(current) > 1){
+   hour_5A.attr("style","background-color:#e6e6e6");
+ }else if(parseInt(current) === 1){
+     hour_5A.attr("style","background-color:#ffffcc");
+ }else if(parseInt(current) < 1) {
+     hour_5A.attr("style","background-color:#ccffcc");
+ }
 
-if(end_5.isAfter(start_time_5)){
-    hour_5A.attr("style","background-color:#e6e6e6");
-}else if(start_time_5.isBetween(time_5)){
-    hour_5A.attr("style","background-color:#ffffcc");
-}else if(start_time_5.isBetween(end_5)) {
-    hour_5A.attr("style","background-color:#ccffcc");
-}
-
-//Fifth Box schedule
+// //Fifth Box schedule
 
 
-var start_time_6 =moment("2:00pm","h:mma");
-var time_6 =moment("2:59pm","h:mma");
-var end_6 =moment("3:00pm","h:mma");
-
-if(end_6.isAfter(start_time_6)){
+if(parseInt(current) > 2){
     hour_6A.attr("style","background-color:#e6e6e6");
-}else if(start_time_6.isBetween(time_6)){
-    hour_5A.attr("style","background-color:#ffffcc");
-}else if(start_time_6.isBetween(end_6)) {
-    hour_5A.attr("style","background-color:#ccffcc");
-}
+}else if(parseInt(current) === 2){
+    hour_6A.attr("style","background-color:#ffffcc");
+ }else if(2 < parseInt(current)){
+     hour_6A.attr("style","background-color:#ccffcc");
+ }
 
-//seventh box schedule 
-var start_time_7 = moment("3:00pm","h:mma");
-var time_7 = moment("3:59pm","h:mma");
-var end_7 = moment("4:00pm","h:mma");
+// //seventh box schedule 
 
-if(end_7.isAfter(start_time_7)){
+if(parseInt(current) > 3) {
     hour_7A.attr("style","background-color:#e6e6e6");
-}else if(start_time_7.isBetween(time_7)){
-    hour_5A.attr("style","background-color:#ffffcc");
-}else if (start_time_7.isBetween(end_7)){
-    hour_5A.attr("style","background-color:#ccffcc");
+}else if(parseInt(current) === 3){
+    hour_7A.attr("style","background-color:#ffffcc");
+}else if (parseInt(current) < 3){
+    hour_7A.attr("style","background-color:#ccffcc");
 }
 
 
-//eigth box schedule
-var start_time_8 = moment("4:00pm","h:mma");
-var time_8 = moment("4:59pm","h:mma");
-var end_8 = moment("5:00pm","h:mma");
+// //eigth box schedule
 
-if(end_8.isAfter(start_time_8)){
-    hour_8A.attr("style","background-color:#e6e6e6");
-}else if(start_time_8.isBetween(time_8)){
-    hour_8A.attr("style","background-color:#ffffcc");
-}else if (start_time_8.isBetween(end_8)){
-    hour_8A.attr("style","background-color:#ccffcc");
-}
+if(parseInt(current) > 4){
+     hour_8A.attr("style","background-color:#e6e6e6");
+ }else if(parseInt(current) === 4){
+     hour_8A.attr("style","background-color:#ffffcc");
+ }else if (parseInt(current) < 4){
+     hour_8A.attr("style","background-color:#ccffcc");
+ }
 
-//ninth box schedule 
-var start_time_9 = moment("5:00pm","h:mma");
-var time_9 = moment("5:59pm","h:mma");
-var end_9 = moment("6:00pm","h:mma");
+//ninth box schedule
 
-if(end_9.isAfter(start_time_9)){
+if(parseInt(current) > 5){
     hour_9A.attr("style","background-color:#e6e6e6");
-}else if(start_time_9.isBetween(time_9)){
+}else if(parseInt(current)=== 5){
     hour_9A.attr("style","background-color:#ffffcc");
-}else if (start_time_9.isBetween(end_9)){
+}else if (parseInt(current)< 5){
     hour_9A.attr("style","background-color:#ccffcc");
-}
+ }
