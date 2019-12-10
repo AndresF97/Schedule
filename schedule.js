@@ -40,14 +40,12 @@ var clearbt =$("body").find("#clear");
 //Listeners that will listen to each event and will save seperalty and return the 
 hour_1bt.on("click",function(){
     var act = hour_1A.val();
-    localStorage.setItem("Day_1",act)
-    var item = localStorage.getItem("Day_1")
-    hour_1A.append(item)
+    localStorage.setItem("Day_1",act);
+   
     
 })
 hour_2bt.on("click",function(){
     var act = hour_2A.val();
-    console.log(act);
     localStorage.setItem("Day_2",act)
 });
 hour_3bt.on("click",function(){
@@ -95,16 +93,38 @@ $(document).ready(function(){
     var d = new Date();
     var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     day.text(days[d.getDay()]+", "+ num.getDate())
+
+
+    //this gets the items from local storage and returns everything to it proper parent element
+     var item = localStorage.getItem("Day_1");
+     hour_1A.text(item)
+     var item_2=localStorage.getItem("Day_2");
+     hour_2A.text(item_2)
+     var item_3=localStorage.getItem("Day_3");
+     hour_3A.text(item_3);
+     var item_4= localStorage.getItem("Day_4");
+     hour_4A.text(item_4);
+    var item_5 = localStorage.getItem("Day_5");
+     hour_5A.text(item_5);
+     var item_6 = localStorage.getItem("Day_6");
+     hour_6A.text(item_6);
+     var item_7 = localStorage.getItem("Day_7");
+     hour_7A.text(item_7)
+     var item_8 = localStorage.getItem("Day_8");
+     hour_8A.text(item_8);
+     var item_9 = localStorage.getItem("Day_9");
+     hour_9A.text(item_9);
+
 });
 //First Box schedule time set 
 var start_time=moment("9:00am","h:mma")
 var time_1 = moment("9:59am","h:mma");
 var end_1 = moment("10:00am","h:mma");
+var  current = moment().format("h:mm a")
 
-
-if(end_1.isAfter(time_1)){
+if(end_1.isAfter(current)){
     hour_1A.attr("style","background-color: #e6e6e6");
-}else if( start_time.isBetween(time_1)){
+}else if( current.isBefore(time_1)){
     hour_1A.attr("style","background-color:#ffffcc");
 }else if(start_time.isBetween(end_1)){
     hour_1A.attr("style","background-color: #ccffcc");
