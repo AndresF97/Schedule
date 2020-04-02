@@ -1,6 +1,6 @@
 # Schedule
 ## Site Picture
-![Schedule Website](https://media.licdn.com/dms/image/C4D22AQGyb2CfjtYQrA/feedshare-shrink_800/0?e=1579132800&v=beta&t=IMp9J5VLtd6zmR2wr1S85-YB6Ndpg_e_Hb2yU0Asd9o)
+![Schedule Website](assets/img/schedule.gif)
 
 ## Summary 
 This website can be used by anybody not just office workers!!!. The website is set to change color once that hour of the day has passed,are in the current hour or open hours in your schedule.
