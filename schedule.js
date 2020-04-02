@@ -82,8 +82,13 @@ hour_9bt.on("click",function(){
 })
 
 clearbt.on("click",function(){
+    var confirmed = confirm("Are sure that you would like to delete your schedule")
+    if(confirmed === true){
     $("textarea").val(" ")
     localStorage.clear()
+    }else{
+        return alert("nothing has been deleted") 
+    }
 })
 //setting up the date
 $(document).ready(function(){
