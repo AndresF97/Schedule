@@ -96,8 +96,10 @@ $(document).ready(function(){
     day = $("#date");
     day.innerHTML =" "
     var d = new Date();
+    var newMonth = new Date()
     var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    day.text(days[d.getDay()]+", "+ num.getDate())
+    var months = ["Jan","Feb","Mar","Apr","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+    day.text("Todays date: "+months[newMonth.getMonth()]+" "+num.getDate()+" "+", "+days[d.getDay()])
 
 
     //this gets the items from local storage and returns everything to it proper parent element
